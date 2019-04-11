@@ -23,12 +23,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidX"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
-
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayoutVersion"
     implementation "com.google.dagger:dagger:$versions.dagger"
     kapt "com.google.dagger:dagger-compiler:$versions.dagger"
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
