@@ -2,21 +2,20 @@ package com.developers.baseandroidproject.di.modules
 
 import android.app.Application
 import android.content.Context
+import com.developers.baseandroidproject.executors.AppSchedulers
 import com.developers.baseandroidproject.executors.RxSchedulers
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
-abstract class AppModule {
+class AppModule(private val application: Application) {
+    @Provides
+    @Singleton
+    fun provideAppContext(): Context = application
 
-    @Binds
-    abstract fun bindContext(application: Application): Context
-
-    @Module
-    companion object {
-        @JvmStatic
-        @Provides
-        fun providesExecutors() = RxSchedulers()
-    }
+    @Provides
+    @Singleton
+    fun providesSchedulers(): AppSchedulers = RxSchedulers()
 }

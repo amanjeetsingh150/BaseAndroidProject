@@ -5,11 +5,13 @@ import android.app.Application
 import android.content.Context
 import com.developers.baseandroidproject.di.AppComponent
 import com.developers.baseandroidproject.di.DaggerAppComponent
+import com.developers.baseandroidproject.di.modules.AppModule
 
 class InitApp : Application() {
 
     private val appComponent: AppComponent by lazy {
-        DaggerAppComponent.builder().application(this)
+        DaggerAppComponent.builder()
+            .appModule(AppModule(this))
             .build()
     }
 

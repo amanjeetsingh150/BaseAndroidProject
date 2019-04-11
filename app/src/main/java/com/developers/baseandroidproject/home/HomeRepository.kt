@@ -1,5 +1,8 @@
 package com.developers.baseandroidproject.home
 
-class HomeRepository() {
+import com.developers.baseandroidproject.data.remote.StarterApiService
+import javax.inject.Inject
+
+class HomeRepository @Inject constructor(val starterApiService: StarterApiService) {
 
 }

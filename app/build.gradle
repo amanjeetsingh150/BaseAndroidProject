@@ -45,4 +45,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
     implementation "com.jakewharton.rxbinding2:rxbinding:$versions.rxBindings"
     implementation "com.jakewharton.rxrelay2:rxrelay:$versions.rxRelay"
+    implementation "android.arch.lifecycle:extensions:${versions.archLifecycleVersion}"
+    implementation "android.arch.lifecycle:viewmodel:${versions.archLifecycleVersion}"
 }
