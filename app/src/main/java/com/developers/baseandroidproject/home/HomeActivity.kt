@@ -1,7 +1,7 @@
 package com.developers.baseandroidproject.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.developers.baseandroidproject.R
 import com.developers.baseandroidproject.utils.inject
 import javax.inject.Inject

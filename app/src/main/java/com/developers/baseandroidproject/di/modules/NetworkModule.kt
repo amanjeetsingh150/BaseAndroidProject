@@ -4,7 +4,6 @@ import android.content.Context
 import com.developers.baseandroidproject.data.remote.StarterApiService
 import com.developers.baseandroidproject.utils.BigDecimalJsonAdapter
 import com.squareup.moshi.Moshi
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -32,7 +31,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideHttpCache(context: Context): Cache {
-        val cacheDir = File(context.cacheDir, "http")
+        val cacheDir = File(context.cacheDir, HTTP_CACHE)
         return Cache(cacheDir, HTTP_DISK_CACHE_SIZE)
     }
 
