@@ -17,7 +17,7 @@ class InitApp : Application() {
 
     companion object {
         @JvmStatic
-        fun appComponent(context: Context) = (context as InitApp).appComponent
+        fun appComponent(context: Context) = (context.applicationContext as InitApp).appComponent
     }
 }
 

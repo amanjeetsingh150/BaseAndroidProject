@@ -25,7 +25,7 @@ object NetworkModule {
     @JvmStatic
     @Provides
     fun provideBaseUrl(): String =
-        ""
+        "https://api.themoviedb.org/3/movie/"
 
     @JvmStatic
     @Provides

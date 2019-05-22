@@ -4,10 +4,11 @@ import com.developers.baseandroidproject.appComponent
 import com.developers.baseandroidproject.di.components.DaggerActivityComponent
 import com.developers.baseandroidproject.home.HomeActivity
 
-fun inject(homeActivity: HomeActivity) {
+fun inject(activity: HomeActivity) {
 
     DaggerActivityComponent.builder()
-        .appComponent(homeActivity.appComponent())
+        .appComponent(activity.appComponent())
+        .homeActivity(activity)
         .build()
-        .inject(homeActivity)
+        .inject(activity)
 }
